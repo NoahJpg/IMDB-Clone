@@ -27,12 +27,12 @@ const Cards = ({movie}) => {
             duration={2} 
           />
         </SkeletonTheme>
-    </div>
+      </div>
     :
     <Link 
       to={`/movie/${movie.id}`} 
-      style={{textDecoration:"none", color:"white"}}
-    >
+      style={{textDecoration:"none", color:"white"}}>
+        
       <div className='cards'>
         
         <img 
