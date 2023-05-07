@@ -42,7 +42,7 @@ const Cards = ({movie}) => {
 
         <div className='cards__overlay'>
           <div 
-            className='cards__title'>
+            className='card__title'>
               {movie?movie.original_title: ""}
           </div>
 
