@@ -1,24 +1,22 @@
 <h1 align="center">IMDB Clone</h1>
-  <p align="center">
-    <!-- <div style="text-align:center;">
-    <img src="src/img/Map-Screenshot-3.png" 
-         alt="map-screenshot" 
-         style="display:inline-block; margin:0 auto; max-width:100%; width:max; height: auto; text-align: center;"
-    />
-</div> -->
-
-  </p>
 <h3 align="center">
   🎨 By: Noah Atkinson 
 </h3>
-
+  <p align="center">
+    <div style="text-align:center;">
+    <img src="src/assets/IMDB.png" 
+         alt="map-screenshot" 
+         style="display:inline-block; margin:0 auto; max-width:90%; width:max; height: auto; text-align: center;"
+    />
+</div>
+  </p>
   <p align="center">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
     <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" />
   </p>
   
   <p align="center">
-   <a href="https://IMDB-Clone-app.vercel.app/">🏃 Run the App 💻</a>
+   <a href="https://imdb-clone-project.vercel.app/">🏃 Run the App 💻</a>
     <br><br>
     <a href="#description">📝 Description 📚</a>
     <br>
@@ -39,7 +37,7 @@
 
 ## Run It Here
 
-  [Live project](https://IMDB-Clone-app.vercel.app/)
+  [Live project](https://imdb-clone-project.vercel.app/)
 
 
 ## Technologies Used
@@ -54,7 +52,7 @@
 
 ## Setup and Installation Requirements
 
-  [Live project here](https://IMDB-Clone-app.vercel.app/)
+  [Live project here](https://imdb-clone-project.vercel.app/)
 
 * _TBD_
 
