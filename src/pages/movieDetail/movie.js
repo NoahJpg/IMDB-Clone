@@ -22,7 +22,8 @@ const Movie = () => {
       <div className="movie__intro">
         <img 
           className="movie__backdrop" 
-          src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} 
+          src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`}
+          alt="movie backdrop" 
         />
       </div>
       <div className="movie__detail">
@@ -30,7 +31,8 @@ const Movie = () => {
           <div className="movie__posterBox">
             <img 
               className="movie__poster" 
-              src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} 
+              src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`}
+              alt="movie poster" 
               />
           </div>
         </div>
@@ -45,7 +47,7 @@ const Movie = () => {
 
             <div className="movie__rating">
               {currentMovieDetail ? currentMovieDetail.vote_average: ""} 
-              <i class="fas fa-star" />
+              <i className="fas fa-star" />
               <span className="movie__voteCount">
                 {currentMovieDetail ? "(" + currentMovieDetail.vote_count + ") votes" : ""}
               </span>
@@ -59,11 +61,16 @@ const Movie = () => {
             </div>
 
             <div className="movie__genres">
-              {
-                currentMovieDetail && currentMovieDetail.genres
+              {currentMovieDetail && currentMovieDetail.genres
                 ? 
                   currentMovieDetail.genres.map(genre => (
-                    <><span className="movie__genre" id={genre.id}>{genre.name}</span></>
+                    <span 
+                      key={genre.id}
+                      className="movie__genre" 
+                      id={genre.id}
+                    >
+                      {genre.name}
+                    </span>
                   )) 
                 : ""
               }
@@ -84,7 +91,8 @@ const Movie = () => {
           currentMovieDetail && currentMovieDetail.homepage && 
           <a 
             href={currentMovieDetail.homepage} 
-            target="_blank" 
+            target="_blank"
+            rel="noreferrer" 
             style={{textDecoration: "none"}}>
               <p>
                 <span className="movie__homeButton movie__Button">
@@ -98,7 +106,8 @@ const Movie = () => {
           currentMovieDetail && currentMovieDetail.imdb_id && 
           <a 
             href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} 
-            target="_blank" 
+            target="_blank"
+            rel="noreferrer" 
             style={{textDecoration: "none"}}>
               <p>
                 <span 
@@ -112,21 +121,22 @@ const Movie = () => {
       </div>
       <div className="movie__heading">Production companies</div>
       <div className="movie__production">
-        {
-          currentMovieDetail && currentMovieDetail.production_companies && currentMovieDetail.production_companies.map(company => (
-            <>
+        {currentMovieDetail && 
+          currentMovieDetail.production_companies && 
+          currentMovieDetail.production_companies.map((company) => (
+            <React.Fragment key={company.id}>
               {
-                company.logo_path 
-                && 
+                company.logo_path && (
                 <span className="productionCompanyImage">
                   <img 
-                    className="movie__productionComapany" 
-                    src={"https://image.tmdb.org/t/p/original" + company.logo_path} 
+                    className="movie__productionCompany" 
+                    src={"https://image.tmdb.org/t/p/original" + company.logo_path}
+                    alt="movie production company" 
                   />
                   <span>{company.name}</span>
                 </span>
-              }
-            </>
+              )}
+            </React.Fragment>
           ))
         }  
       </div>
