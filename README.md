@@ -1,4 +1,4 @@
-<h1 align="center">IMDB Clone</h1>
+<h1 align="center">IMDb Clone</h1>
 <h3 align="center">
   🎨 By: Noah Atkinson 
 </h3>
